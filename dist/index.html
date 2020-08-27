@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Etienne Doux - Développeur web fullstack</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="../public/css/main.css">
+        <link rel="stylesheet" href="../public/css/loader.css">
+    </head>
+    <body>
+      <div id="background-dark"></div>
+        <nav class="navbar navbar-expand-lg fixed-top"  style="padding-right: 0; padding-left: 0;">
+           
+
+          
+
+              <ul class="navbar-nav ml-auto pt-3 pb-3" id="nav-zone">
+                <li class="nav-item pr-1 mr-2">
+                  <a class="nav-link link" href="#" id="home-button">Accueil</a>
+                </li>
+                <li class="nav-item pr-1 mr-2">
+                  <a class="nav-link link" href="#" id="work-button">Travaux</a>
+                </li>
+                <li class="nav-item pr-1 mr-2">
+                    <a class="nav-link link" href="#" id="about-button">A propos</a>
+                  </li>
+              </ul>
+
+
+          </nav>
+          <div id='threeCanvas'>
+          </div>
+          <div class="loading-background">
+            <div class="loading-container">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"/>
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+
+          <div id="name-container">
+            <h2 id="dev-name" style="opacity: 1;
+            transform: matrix(1, 0, 0, 1, 0, 0);">Etienne Doux</h2>
+            <h1 id="dev-title">Développeur Web FullStack <br> PHP/NodeJs</h1>
+          </div>
+          <div id="work-container" style="display: none; transform: matrix(1, 0, 0, 1, 0, 616);">
+            <div id="work-zone">
+              <div class="work-row" style="min-width: 100%; min-height: 4rem;background-color: rgb(0 0 0 / 57%); justify-content: center; align-items:center; box-shadow: 0 8px 64px 0 #000;">
+               <h2 style="text-transform: uppercase; color: white; font-size: 1.5rem; font-weight:200"> Développement</h2>
+              </div>
+              <div class="work-row">
+              <div class="work-item mr-2">
+                <a href="https://bellesdejour-institut.com/" target="_blank"><img src="../public/img/bellejour2.jpg" class="work-img"></a>
+              </div>
+              <div class="work-item ml-2">
+                <a href="https://christineandcie.fr/" target="_blank"><img src="../public/img/bunker-vecto-01.png" class="work-img"></a>
+              </div>
+            </div>
+            <div class="work-row">
+              <div class="work-item mr-2">
+                <a href="https://github.com/Tavrin/dota-bot" target="_blank"><img src="../public/img/dotabot.png" class="work-img"></a>
+              </div>
+              <div class="work-item ml-2">
+                <a href="https://github.com/Tavrin/Discord-bot" target="_blank"><img src="../public/img/FWFEAB2K1S38849.png" class="work-img"></a>
+              </div>
+            </div>
+            <div class="work-row" style="min-width: 100%; min-height: 4rem;background-color: rgb(0 0 0 / 57%); justify-content: center; align-items:center; box-shadow: 0 8px 64px 0 #000;">
+              <h2 style="text-transform: uppercase; color: white; font-size: 1.5rem; font-weight:200"> Design Graphique</h2>
+             </div>
+             <div class="work-row"> 
+              <a href="https://github.com/Tavrin/Discord-bot" target="_blank"><img src="../public/img/emerging_by_tavrinn_d64234r2.png" class="work-img"></a>
+
+             </div>
+             <div class="work-row"> 
+              <a href="https://github.com/Tavrin/Discord-bot" target="_blank"><img src="../public/img/strange_forest_spirits_by_tavrinn_d5mx1jg2.png" class="work-img"></a>
+
+             </div>
+             <div class="work-row"> 
+              <a href="https://github.com/Tavrin/Discord-bot" target="_blank"><img src="../public/img/cavern.png" class="work-img"></a>
+
+             </div>
+             <div class="work-row">
+              <div class="work-item mr-2">
+                <a href="https://bellesdejour-institut.com/" target="_blank"><img src="../public/img/infernal_by_tavrinn_d66inmk2.png" class="work-img"></a>
+              </div>
+              <div class="work-item ml-2">
+                <a href="https://christineandcie.fr/" target="_blank"><img src="../public/img/sombra-v12.png" class="work-img"></a>
+              </div>
+            </div>
+            
+            <div class="work-row">
+              <div class="work-item mr-2">
+                <a href="https://bellesdejour-institut.com/" target="_blank"><img src="../public/img/tlr.png" class="work-img"></a>
+              </div>
+              <div class="work-item ml-2">
+                <a href="https://christineandcie.fr/" target="_blank"><img src="../public/img/pizza2.png" class="work-img"></a>
+              </div>
+            </div>
+
+            <div class="work-row">
+              <div class="work-item mr-2">
+                <a href="https://bellesdejour-institut.com/" target="_blank"><img src="../public/img/hotel.png" class="work-img"></a>
+              </div>
+              <div class="work-item ml-2">
+                <a href="https://christineandcie.fr/" target="_blank"><img src="../public/img/Untitled-3v8.png" class="work-img"></a>
+              </div>
+            </div>
+
+            </div>
+           
+          </div>
+
+          <div id="about-container">
+            <div id="about-content" class="" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+        
+              <a name="intro" id="intro-anchor"></a>
+              <div class="text-zone-about">
+          
+                  <h1 class="about-titre">Bonjour, je m'appelle Etienne et je suis développeur web Full Stack.</h1>
+          
+                  <p class="about-texte">
+                   Un développeur web ayant appris jusque-là en autodidacte, je ne recule pas devant de nouveaux défis, toujours partant pour agrandir mes connaissances et améliorer mes compétences
+                  en la matière, je sais facilement m'adapter.   
+          
+                  </p>
+          
+                  <p class="about-texte">
+                      Développeur Full Stack, je sais me débrouiller en frontend et en intégration même si j'ai une préférence pour le backend.
+                      Je suis compétent en HTML, CSS (Vanilla et Bootstrap), Javascript, Ajax,JQuery, ThreeJs pour le frontend. Pour le backend je suis compétent en NodeJs(Express, DiscordJs), PHP(Symfony), MongoDB, MySQL, en templating(EJS, Twig) et en création d'API.
+                      J'ai aussi des compétences en Shell et Python scripting, en devops sous serveur Ubuntu, en sécurité informatique 
+                  </p>
+          
+                  <p class="about-texte">
+                    Au delà de mes compétences en développement je suis formé en psychologie et en design qui me permettent d'avoir une certaine méthodologie de design et d'ergonomie, j'ai aussi une bonne maîtrise de la suite Adobe
+                </p>
+<br>
+                  
+          
+          
+                  
+              </div>
+          
+              <div class="text-zone-about" style="padding-top: unset;"><h1 class="about-titre">Contact</h1>
+                <p class="about-texte">
+                  Vous pouvez me retrouver sur <a href="https://www.linkedin.com/in/etienne-doux/" class="about-lien" target="_blank">LinkedIn</a>, sur <a href="https://github.com/Tavrin" class="about-lien" target="_blank">Github</a> et sur  <a href="https://www.behance.net/Etienne-D" class="about-lien" target="_blank">Behance</a>.
+                  </p>
+                  <p class="about-texte pt-4 pb-5" style="margin-top: 4rem; text-align: center">
+                    <a href="mailto:etienne.doux@gmail.com" class="bouton-email">Envoyer un email</a>
+                </p>
+                  <p class="mt-5 mb-5 pb-5" style="text-align: center;">
+                    <img src="../public/img/etienne.png" alt="" >
+                  </p>
+              </div>
+          
+          </div>
+          </div>
+        
+        <script src="" async defer></script>
+        
+        <script src="main.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    </body>
+</html>
