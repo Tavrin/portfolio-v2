@@ -19,7 +19,7 @@ container = document.querySelector('#threeCanvas')
 const RADIUS = 100;
 const SEGMENTS = 32;
 const RINGS = 32;
-
+var lastButton = 0;
 var buttonClicked = false;
 var mouseX = 0, mouseY = 0;
 
@@ -197,7 +197,7 @@ var animate = function () {
     mesh.rotation.y += 0.001;
 
     pivot.rotation.y += 0.001;
-
+     
     // if(camera.position.x <= 8 && camera.position.x >= -8){
     //     console.log(camera.position.x);
     //     camera.position.x += (( mouseX - camera.position.x ) * 0.02)/100;
@@ -225,7 +225,7 @@ var animate = function () {
         //     buttonId = 0;
         // }
     }
-    else if(buttonClicked == false && buttonId == 1){
+    else if(buttonClicked == false && buttonId == 1 && (lastButton == 2 || lastButton == 3)){
        
         if(camera.position.x > 3){
             count +=0.2;
@@ -296,10 +296,12 @@ document.getElementById("work-button").addEventListener( 'click', function(){
         if(buttonId == 1){
             $( "#dev-name" ).fadeOut();
             $( "#dev-title" ).fadeOut();
+            lastButton = 1;
         }
         else if(buttonId==3){
             $("#about-container").fadeOut();
             $("#background-dark").fadeOut();
+            lastButton = 3;
         }
         
         buttonClicked = true;
@@ -314,11 +316,12 @@ document.getElementById("home-button").addEventListener( 'click', function(){
     if (buttonId != 1){
   
         if(buttonId == 2){
-            
+            lastButton = 2;
             document.getElementById("work-container").style.transform = "translateY(120%)";
             window.setTimeout(function(){displayWork(1);},400);
         }
         else if(buttonId==3){
+            lastButton = 3;
             $("#about-container").fadeOut();
             $("#background-dark").fadeOut();
         }
@@ -335,14 +338,17 @@ document.getElementById("home-button").addEventListener( 'click', function(){
 
 document.getElementById("about-button").addEventListener( 'click', function(){
     if(buttonId != 3){
+        lastButton = buttonId;
         if(buttonId == 1){
             $( "#dev-name" ).fadeOut();
             $( "#dev-title" ).fadeOut();
+            lastButton = 1;
         }
         else if(buttonId == 2){
         document.getElementById("work-container").style.transform = "translateY(120%)";
 
         window.setTimeout(function(){displayWork(1);},400);
+        lastButton = 2;
 
         }
             
@@ -350,6 +356,7 @@ document.getElementById("about-button").addEventListener( 'click', function(){
             $("#background-dark").fadeIn();
         buttonClicked = true;
         buttonId= 3;
+        
     }
     
     
