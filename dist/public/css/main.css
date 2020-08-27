@@ -86,6 +86,10 @@ canvas { display: block; }
     padding-top: 4rem;
 }
 
+.social{
+    font-size: 2rem;
+}
+
 .work-item{
     cursor: pointer;
     min-width: 48%;
