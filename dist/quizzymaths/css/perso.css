@@ -1,0 +1,84 @@
+.exitconnect:hover {
+  background : #b3381e;
+}
+.bodyperso{
+  background-color: #005996;
+}
+h1{
+  font-family: sans-serif;
+  color: white;
+}
+h2{
+  font-family: sans-serif;
+  color: white;
+}
+.instructions{
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: justify;
+
+}
+.infos{
+  font-family: sans-serif;
+  font: Helvetica;
+  font-weight: bold;
+}
+.jumbotron{
+  background-color: white;
+}
+.searchFieldText1 {
+    border: medium none;
+    background-color: #EFF0F1;
+    color: black;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 120px;
+      font-size: 32px;
+    width: 400px;
+}
+.searchButton {
+    float: right;
+  width: 100%;
+
+}
+.searchButton2 {
+    float: left;
+  width: 100%;
+
+}
+.btn-sweet{
+  float: right;
+  background: #3498db;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: white;
+  height: 120px;
+  width: 300px;
+  font-size: 32px;
+  border: 0px;
+  font-family: sans-serif;
+}
+
+.lareponse2{
+  margin-top: 5%;
+  margin-left: 52%;
+ margin-bot: 200px;
+}
+.lareponse1{
+margin-top : 5px;
+
+}
+
+.imagerie{
+margin-bottom : 10%;
+}
+.searchFieldText2{
+ border: medium none;
+    background-color: #EFF0F1;
+    color: black;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    width : 100%;
+height : 30px;
+font-size : 35px;
+}
