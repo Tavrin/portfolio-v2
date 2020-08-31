@@ -1,6 +1,6 @@
 .loading-background{
     background-color: black;
-    /* z-index: 99; */
+    z-index: 1031;
     position: absolute;
     min-width: 100%;
     min-height: 100vh;
