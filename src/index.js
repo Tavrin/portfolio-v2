@@ -65,7 +65,7 @@ function init() {
     // var meteorMat = textureLoader.load( '/public/textures/4k_ceres_fictional.jpg' );
     // var meteorMat2 = textureLoader.load( '/public/textures/8d12c1eb21eb70291bb884ae4f8984dc.png' );
     renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setPixelRatio( window.devicePixelRatio );
+  
     renderer.autoClear = false;
 
  scene = new THREE.Scene();
@@ -73,7 +73,6 @@ function init() {
 camera.position.z = 10;
 camera.lookAt(new THREE.Vector3(0,0,0));
 
-renderer.setSize( window.innerWidth, window.innerHeight );
 container.appendChild( renderer.domElement );
 
 scene.background = new THREE.Color( 0x15161e );
@@ -182,14 +181,29 @@ var vertices = [];
 // var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 // var cube = new THREE.Mesh( geometry, material );
 // scene.add( cube );
-
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
 // camera.position.z = 5;
 controls.update();
 document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 document.addEventListener( 'touchstart', onDocumentTouchStart, false );
 document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+window.addEventListener( 'resize', onWindowResize, false );
 vector = new THREE.Vector3(300,100,10);
 }
+
+function onWindowResize() {
+
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
 
 var animate = function () {
     requestAnimationFrame( animate );
@@ -241,21 +255,12 @@ var animate = function () {
     
     controls.update();
     renderer.render( scene, camera );
+
 };
 
 init();
 animate();
 
-function onWindowResize() {
-windowHalfX = window.innerWidth / 2;
-windowHalfY = window.innerHeight / 2;
-
-camera.aspect = window.innerWidth / window.innerHeight;
-camera.updateProjectionMatrix();
-
-renderer.setSize( window.innerWidth, window.innerHeight );
-
-}
 
 function onDocumentMouseMove( event ) {
 
@@ -375,3 +380,4 @@ function displayWork(state) {
     }
     
   }
+
