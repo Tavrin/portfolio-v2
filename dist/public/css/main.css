@@ -216,7 +216,7 @@ line-height: 1.5;
         margin-bottom: 2rem;
         padding-top: 1rem;
            }
-    #nav-zone{
+    .nav-zone{
         flex-direction: row;
     } 
     #about-content{
