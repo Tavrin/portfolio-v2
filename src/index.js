@@ -35,8 +35,8 @@ THREE.DefaultLoadingManager.onStart = function ( url, itemsLoaded, itemsTotal ) 
 THREE.DefaultLoadingManager.onLoad = function ( ) {
 
     console.log( 'Loading Complete!');
-    // progressElement.style.display = "none"
-    // progressBackground.style.display = "none"
+    progressElement.style.display = "none"
+    progressBackground.style.display = "none"
     // headerZone.style.display = "block"
 
 };
