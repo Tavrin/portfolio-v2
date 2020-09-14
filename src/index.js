@@ -59,11 +59,10 @@ THREE.DefaultLoadingManager.onError = function ( url ) {
 function init() {
 
     var textureLoader = new THREE.TextureLoader();
-    // const textureSun =textureLoader.load('/public/textures/2k_sun.jpg')
-    const textureStar1 = textureLoader.load('/public/textures/2k_sun2.jpg')
-    var sprite1 = textureLoader.load( '/public/textures/sprite1.png' );
-    // var meteorMat = textureLoader.load( '/public/textures/4k_ceres_fictional.jpg' );
-    // var meteorMat2 = textureLoader.load( '/public/textures/8d12c1eb21eb70291bb884ae4f8984dc.png' );
+
+    const textureStar1 = textureLoader.load('/dist/public/textures/2k_sun2.jpg')
+    // var sprite1 = textureLoader.load( '/public/textures/sprite1.png' );
+
     renderer = new THREE.WebGLRenderer({antialias: true});
   
     renderer.autoClear = false;
