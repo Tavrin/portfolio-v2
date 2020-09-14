@@ -60,7 +60,7 @@ function init() {
 
     var textureLoader = new THREE.TextureLoader();
 
-    const textureStar1 = textureLoader.load('/dist/public/textures/2k_sun2.jpg')
+    const textureStar1 = textureLoader.load('public/textures/2k_sun2.jpg')
     // var sprite1 = textureLoader.load( '/public/textures/sprite1.png' );
 
     renderer = new THREE.WebGLRenderer({antialias: true});
