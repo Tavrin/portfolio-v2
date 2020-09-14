@@ -22,7 +22,7 @@ const RINGS = 32;
 var lastButton = 0;
 var buttonClicked = false;
 var mouseX = 0, mouseY = 0;
-
+const textureLoader = new THREE.TextureLoader();
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 
@@ -58,13 +58,13 @@ THREE.DefaultLoadingManager.onError = function ( url ) {
 
 function init() {
 
-    var textureLoader = new THREE.TextureLoader();
+    renderer = new THREE.WebGLRenderer({antialias: true});
+    container.appendChild( renderer.domElement );
 
     const textureStar1 = textureLoader.load('public/textures/2k_sun2.jpg')
     // var sprite1 = textureLoader.load( '/public/textures/sprite1.png' );
 
-    renderer = new THREE.WebGLRenderer({antialias: true});
-  
+    
     renderer.autoClear = false;
 
  scene = new THREE.Scene();
@@ -72,7 +72,7 @@ function init() {
 camera.position.z = 10;
 camera.lookAt(new THREE.Vector3(0,0,0));
 
-container.appendChild( renderer.domElement );
+
 
 scene.background = new THREE.Color( 0x15161e );
 
@@ -257,10 +257,13 @@ var animate = function () {
 
 };
 
+
+$( document ).ready(function() {
+    console.log("doc rdy")
 init();
 animate();
 
-
+})
 function onDocumentMouseMove( event ) {
 
 mouseX = event.clientX - windowHalfX;
